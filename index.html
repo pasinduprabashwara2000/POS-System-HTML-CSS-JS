@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assests/css/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h3 class="login-container-title">Login</h3>
+
+    <form class="form-container" onsubmit="login(event)">
+        <label for="username">Username :</label>
+        <input type="text" id="username" name="username" class="form-control" placeholder="Enter Your Username">
+        <label for="password">Password : </label>
+        <input type="password" id="password" name="password" class="form-control" placeholder="Enter Your Password">
+
+        <button type="submit" class="button">Log In</button>
+        <button type="reset" class="button" style="background: linear-gradient(120deg,#6c757d,#495057); margin-top:8px;">Reset</button>
+    </form>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    function login(event) {
+        event.preventDefault();
+
+        const username = document.getElementById("username").value.trim();
+        const password = document.getElementById("password").value.trim();
+
+        if (username === "" || password === "") {
+            Swal.fire({ icon: "error", title: "Error...", text: "Please fill Username and Password" });
+            return;
+        }
+
+        const correct_username = "Admin";
+        const correct_password = "Admin@2026";
+
+        if (username === correct_username && password === correct_password) {
+            Swal.fire({ title: "Login Successfully!", icon: "success" }).then(() => {
+                window.location.href = "crud.html";
+            });
+        } else {
+            Swal.fire({ icon: "error", title: "Error...", text: "Invalid Username or Password" });
+        }
+    }
+</script>
+
+</body>
+</html>

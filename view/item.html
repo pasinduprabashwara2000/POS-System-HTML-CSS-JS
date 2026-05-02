@@ -1,0 +1,57 @@
+<div class="container-top">
+    <h3>Manage Items</h3>
+
+    <form style="margin-top:20px">
+
+        <div class="row mb-3">
+
+            <div class="col-md-4">
+                <label>Item Code :</label>
+                <input type="text" id="item_code_input" class="form-control">
+            </div>
+
+            <div class="col-md-4">
+                <label>Item Name :</label>
+                <input type="text" id="item_name_input" class="form-control">
+            </div>
+
+            <div class="col-md-4">
+                <label>Unit Price :</label>
+                <input type="text" id="item_unit_price_input" class="form-control">
+            </div>
+
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-md-4">
+                <label>QTY :</label>
+                <input type="text" id="item_qty_input" class="form-control">
+            </div>
+        </div>
+
+        <div class="btn-section">
+            <button type="button" id="item_save_btn" class="btn btn-primary">Save</button>
+            <button type="button" id="item_update_btn" class="btn btn-success">Update</button>
+            <button type="button" id="item_delete_btn" class="btn btn-danger">Delete</button>
+            <button type="button" id="item_reset_btn" class="btn btn-secondary">Reset</button>
+        </div>
+
+    </form>
+</div>
+
+<div class="container-bottom">
+    <table class="table table-striped table-hover">
+
+        <thead>
+        <tr>
+            <th>Item Code</th>
+            <th>Item Name</th>
+            <th>Unit Price</th>
+            <th>QTY</th>
+        </tr>
+        </thead>
+
+        <tbody id="item_tbody"></tbody>
+
+    </table>
+</div>

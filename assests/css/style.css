@@ -1,0 +1,173 @@
+/* Import Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+/* Global */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container */
+.container {
+    position: relative;
+    margin: 60px auto;
+    width: 480px;
+    height: 480px;
+    border-radius: 30px;
+    background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Title */
+.login-container-title {
+    text-align: center;
+    font-weight: 600;
+    font-size: 28px;
+    padding-top: 30px;
+    color: #333;
+}
+
+/* Form container */
+.form-container {
+    position: absolute;
+    top: 110px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+}
+
+/* Input fields */
+.form-control {
+    width: 100%;
+    margin: 12px 0;
+    padding: 12px 15px;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    font-weight: 400;
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Button */
+.button {
+    width: 100%;
+    margin-top: 15px;
+    height: 3rem;
+    border-radius: 1.5rem;
+    background: linear-gradient(120deg, #3d3a4e, #5a5470);
+    color: #fff;
+    border: none;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Button hover effect */
+.button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Button click effect */
+.button:active {
+    transform: scale(0.98);
+}
+
+/*------------------------ CRUD CSS ----------------------------------*/
+
+.container-left {
+    position: relative;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-left: 15px;
+    width: 280px;
+    height: 600px;
+    background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+}
+
+.container-right{
+    position: absolute;
+    top: 15px;
+    left: 310px;
+}
+
+.container-top {
+    position: absolute;
+    left: 10px;
+    top: 2px;
+    width: 1020px;
+    height: 300px;
+}
+
+.container-bottom{
+    position: absolute;
+    left: 10px;
+    top: 340px;
+    width: 1020px;
+    height: 300px;
+}
+
+/* Sidebar Title */
+.container-left-title {
+    position: absolute;
+    top: 20px;
+    left: 55px;
+    font-weight: 600;
+    font-size: 24px;
+}
+
+/* Navigation */
+.navigation-menu {
+    list-style: none;
+    padding: 0;
+}
+
+.navigation-menu li {
+    margin: 5px 0;
+}
+
+.navigation-menu a {
+    position: relative;
+    top: 80px;
+    display: block;
+    padding: 12px;
+    border-radius: 10px;
+    text-decoration: none;
+    text-align: center;
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.navigation-menu a:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+/* Logout Button */
+.log-out {
+    width: 80%;
+    margin-top: 160px;
+    margin-left: 25px;
+    height: 3rem;
+    border-radius: 1.5rem;
+    background: linear-gradient(120deg, #ff0008, #da525a);
+    color: #fff;
+    border: none;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.log-out:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.log-out:active {
+    transform: scale(0.98);
+}
