@@ -58,11 +58,30 @@ export function initCustomer() {
         const address = $("#customer_address_input").val().trim();
         const contact = $("#customer_contact_number_input").val().trim();
 
-        if (!id)                          { Swal.fire({ icon: "error", title: "Invalid ID!" }); return; }
-        if (getCustomerDataById(id))      { Swal.fire({ icon: "error", title: "Duplicate ID!" }); return; }
-        if (!name)                        { Swal.fire({ icon: "error", title: "Invalid Name!" }); return; }
-        if (!address)                     { Swal.fire({ icon: "error", title: "Invalid Address!" }); return; }
-        if (!check_phone(contact))        { Swal.fire({ icon: "error", title: "Invalid Contact!", text: "Use 7–15 digits only." }); return; }
+        if (!id) {
+            Swal.fire({ icon: "error", title: "Invalid ID!" });
+            return;
+        }
+
+        if (getCustomerDataById(id)) {
+            Swal.fire({ icon: "error", title: "Duplicate ID!" });
+            return;
+        }
+
+        if (!name) {
+            Swal.fire({ icon: "error", title: "Invalid Name!" });
+            return;
+        }
+
+        if (!address) {
+            Swal.fire({ icon: "error", title: "Invalid Address!" });
+            return;
+        }
+
+        if (!check_phone(contact)) {
+            Swal.fire({ icon: "error", title: "Invalid Contact!", text: "Use 7–15 digits only." });
+            return;
+        }
 
         addCustomerData(id, name, address, contact);
         Swal.fire({ icon: "success", title: "Customer Saved Successfully" });
@@ -77,10 +96,24 @@ export function initCustomer() {
         const address = $("#customer_address_input").val().trim();
         const contact = $("#customer_contact_number_input").val().trim();
 
-        if (!getCustomerDataById(id)) { Swal.fire({ icon: "error", title: "Customer Not Found!" }); return; }
-        if (!name)                    { Swal.fire({ icon: "error", title: "Invalid Name!" }); return; }
-        if (!address)                 { Swal.fire({ icon: "error", title: "Invalid Address!" }); return; }
-        if (!check_phone(contact))    { Swal.fire({ icon: "error", title: "Invalid Contact!", text: "Use 7–15 digits only." }); return; }
+        if (!getCustomerDataById(id)) {
+            Swal.fire({ icon: "error", title: "Customer Not Found!" });
+            return;
+        }
+
+        if (!name) {
+            Swal.fire({ icon: "error", title: "Invalid Name!" });
+            return;
+        }
+
+        if (!address) {
+            Swal.fire({ icon: "error", title: "Invalid Address!" });
+            return;
+        }
+
+        if (!check_phone(contact)) { Swal.fire({ icon: "error", title: "Invalid Contact!", text: "Use 7–15 digits only." });
+            return;
+        }
 
         updateCustomerData(id, name, address, contact);
         Swal.fire({ icon: "success", title: "Customer Updated Successfully" });
@@ -92,7 +125,10 @@ export function initCustomer() {
     $(document).on("click", "#customer_delete_btn", function () {
         const id = $("#customer_id_input").val().trim();
 
-        if (!getCustomerDataById(id)) { Swal.fire({ icon: "error", title: "Customer Not Found!" }); return; }
+        if (!getCustomerDataById(id)) {
+            Swal.fire({ icon: "error", title: "Customer Not Found!" });
+            return;
+        }
 
         Swal.fire({
             title: "Are you sure?", text: "Delete this customer?",

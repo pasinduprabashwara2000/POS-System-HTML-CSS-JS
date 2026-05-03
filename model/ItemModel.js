@@ -50,10 +50,32 @@ const addItemData = (item_code, item_name, unit_price, qty) => {
     item_db.push(new Item(item_code, item_name, unit_price, qty));
 };
 
+const updateItemData = (item_code, item_name, unit_price, qty) => {
+    const obj = getItemDataById(item_code);
+
+    if(obj) {
+        obj.item_name = item_name;
+        obj.unit_price = unit_price;
+        obj.qty = qty;
+    }
+};
+
+const deleteItemData = (item_code) => {
+    const index = item_db.findIndex(i => i.item_code === item_code);
+
+    if (index !== -1){
+        item_db.splice(index,1);
+    }
+};
+
 const getItemsData = () => {
     return item_db;
 }
 
-export {addItemData,getItemsData};
+const getItemDataById = (item_code) => {
+    return item_db.find(i => i.item_code === item_code);
+}
+
+export {addItemData,updateItemData,getItemsData,getItemDataById,deleteItemData};
 
 
