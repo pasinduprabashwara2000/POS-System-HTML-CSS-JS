@@ -29,25 +29,26 @@ class Item {
         return this.#qty;
     }
 
-    set item_code(v) {
-        this.#item_code  = v;
+    set item_code(item_code) {
+        this.#item_code  = item_code;
     }
 
-    set item_name(v) {
-        this.#item_name  = v;
+    set item_name(item_name) {
+        this.#item_name  = item_name;
     }
 
-    set unit_price(v) {
-        this.#unit_price = v;
+    set unit_price(unit_price) {
+        this.#unit_price = unit_price;
     }
 
-    set qty(v) {
-        this.#qty        = v;
+    set qty(qty) {
+        this.#qty        = qty;
     }
 }
 
 const addItemData = (item_code, item_name, unit_price, qty) => {
-    item_db.push(new Item(item_code, item_name, unit_price, qty));
+    const item = new Item(item_code, item_name, unit_price, qty);
+    item_db.push(item);
 };
 
 const updateItemData = (item_code, item_name, unit_price, qty) => {

@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1f3b18c7-0881-48bb-af11-6b4ec0b3bddf" name="Changes" comment="Add Customer Management">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="1f3b18c7-0881-48bb-af11-6b4ec0b3bddf" name="Changes" comment="Add Item Management">
+      <change afterPath="$PROJECT_DIR$/controller/OrderController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/OrderModel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/order.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/CustomerController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/CustomerController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/ItemController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ItemController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assests/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/assests/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db.js" beforeDir="false" afterPath="$PROJECT_DIR$/db/db.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/CustomerModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/CustomerModel.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/ItemModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/ItemModel.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -20,8 +23,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -52,40 +55,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/opt/lampp/htdocs/POS System New",
-    "list.type.of.created.stylesheet": "CSS",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/opt/lampp/htdocs/POS System New&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/assests" />
       <recent name="$PROJECT_DIR$/pages/css" />
       <recent name="$PROJECT_DIR$/pages" />
     </key>
-  </component>
-  <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="POS System New" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="POS System New" />
-      <option name="filePath" />
-      <method v="2" />
-    </configuration>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -110,7 +101,9 @@
       <workItem from="1777739179770" duration="995000" />
       <workItem from="1777787353254" duration="5472000" />
       <workItem from="1777809206666" duration="982000" />
-      <workItem from="1777810564996" duration="1974000" />
+      <workItem from="1777810564996" duration="10622000" />
+      <workItem from="1777871120117" duration="2866000" />
+      <workItem from="1777881097117" duration="2083000" />
     </task>
     <task id="LOCAL-00001" summary="Initialize Project">
       <option name="closed" value="true" />
@@ -136,7 +129,15 @@
       <option name="project" value="LOCAL" />
       <updated>1777739341178</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Add Item Management">
+      <option name="closed" value="true" />
+      <created>1777812711047</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1777812711048</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -145,6 +146,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initialize Project" />
     <MESSAGE value="Add Customer Management" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Customer Management" />
+    <MESSAGE value="Add Item Management" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Item Management" />
   </component>
 </project>

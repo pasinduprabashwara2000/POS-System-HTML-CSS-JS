@@ -29,25 +29,26 @@ class Customer {
         return this.#contact;
     }
 
-    set id(v) {
-        this.#id = v;
+    set id(id) {
+        this.#id = id;
     }
 
-    set name(v) {
-        this.#name = v;
+    set name(name) {
+        this.#name = name;
     }
 
-    set address(v) {
-        this.#address = v;
+    set address(address) {
+        this.#address = address;
     }
 
-    set contact(v) {
-        this.#contact = v;
+    set contact(contact) {
+        this.#contact = contact;
     }
 }
 
 const addCustomerData = (id, name, address, contact) => {
-    customer_db.push(new Customer(id, name, address, contact));
+    const new_customer = new Customer(id,name,address,contact);
+    customer_db.push(new_customer);
 };
 
 const updateCustomerData = (id, name, address, contact) => {
